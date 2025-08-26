@@ -2,4 +2,37 @@
 
 .activities {
     padding-top: 60px;
+
+    &__wrapper {
+        margin-top: 20px;
+        row-gap: 40px;
+    }
+
+    &__img {
+        margin-top: 40px;
+        box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.25);
+    }
+
+    &__text {
+        margin-top: 20px;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 100%;
+        letter-spacing: 0%;
+
+        &_colored {
+            color: $ceramic;
+            font-weight: 500;
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .activities {
+        padding: 60px 119px 0 119px;
+
+        &__img {
+            // width: 100%;
+        }
+    }
 }
