@@ -13,11 +13,12 @@ const swiper = new Swiper('.swiper', {
     slidesPerView: 1,
     loop: true,
     navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
+        nextEl: ".icon-left-open",
+        prevEl: ".icon-right-open",
     },
     pagination: {
         el: ".swiper-pagination",
+        clickable: true,
     },
     breakpoints: {
         1200: {
