@@ -2,7 +2,6 @@
 
 .works {
     padding-top: 60px;
-    padding-bottom: 100px;
 
     &__slider {
         margin-top: 40px;
@@ -62,24 +61,56 @@
             margin: 80px 40px 44.5px 40px;
         }
 
+        .swiper-slide img {
+            width: 100%;
+            margin: 0;
+        }
+
         .swiper-pagination {
             bottom: -30px;
         }
 
         &__nav-slider {
             display: block;
+            cursor: pointer;
             font-size: 21px;
+            background-color: transparent;
+            border: none;
             position: absolute;
             top: 50%;
             transform: translateY(-50%);
+
+            &::before {
+                width: auto;
+                margin: 0;
+            }
         }
 
         .icon-left-open {
-            left: 0;
+            left: 12px;
         }
 
         .icon-right-open {
-            right: 0;
+            right: 12px;
+        }
+    }
+}
+
+@media screen and (min-width: 1920px) {
+    .works {
+        padding-top: 100px;
+
+        &__slider {
+            // margin-top: 80px;
+            margin: 80px 85px 44.5px 85px;
+        }
+
+        .icon-left-open {
+            left: 40px;
+        }
+
+        .icon-right-open {
+            right: 40px;
         }
     }
 }

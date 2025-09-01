@@ -13,8 +13,8 @@ const swiper = new Swiper('.swiper', {
     slidesPerView: 1,
     loop: true,
     navigation: {
-        nextEl: ".icon-left-open",
-        prevEl: ".icon-right-open",
+        nextEl: ".icon-right-open",
+        prevEl: ".icon-left-open",
     },
     pagination: {
         el: ".swiper-pagination",

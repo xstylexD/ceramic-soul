@@ -1,0 +1,31 @@
+@use "/src/sass/base/variables.scss" as *;
+
+.footer {
+    margin-top: 60px;
+    padding: 50px 0 50px 0;
+    background-color: $dark;
+
+    .footer_title-first {
+        margin-top: 0px;
+    }
+
+    &__title {
+        margin-top: 40px;
+        color: $light;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 100%;
+        letter-spacing: 0%;
+        text-transform: uppercase;
+    }
+
+    .footer__text {
+        display: block;
+        margin-top: 40px;
+        color: $light;
+        font-weight: 400;
+        line-height: 100%;
+        letter-spacing: 0%;
+        text-align: left;
+    }
+}
