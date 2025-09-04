@@ -1,31 +1,194 @@
 @use "/src/sass/base/variables.scss" as *;
 
 .footer {
-    margin-top: 60px;
-    padding: 50px 0 50px 0;
+    margin-top: 95px;
+    padding: 50px 0;
     background-color: $dark;
 
-    .footer_title-first {
-        margin-top: 0px;
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+
+    &__newsletter {
+        min-width: 100%;
     }
 
     &__title {
-        margin-top: 40px;
-        color: $light;
         font-size: 16px;
-        font-weight: 500;
-        line-height: 100%;
-        letter-spacing: 0%;
-        text-transform: uppercase;
+        color: $light;
+        text-align: left;
     }
 
-    .footer__text {
+    &__info {
+        margin-top: 40px;
+        font-size: 16px;
+        font-weight: 400;
+        color: $light;
+    }
+
+    &__input {
+        color: $light;
         display: block;
         margin-top: 40px;
+        width: 293px;
+        height: 32px;
+        background-color: transparent;
+        outline: none;
+        border: none;
+        border-bottom: 1px solid $light;
+        padding-bottom: 15px;
+
+        ::placeholder {
+            color: $ui-active;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 100%;
+            letter-spacing: 0%;
+        }
+    }
+
+    &__check-block {
+        margin-top: 20px;
+        display: flex;
+        align-items: center;
         color: $light;
+
+        a {
+            text-decoration: none;
+            color: rgba(162, 45, 198, 1);
+            margin-left: 4px;
+        }
+    }
+
+
+    &__checkbox {
+        margin-right: 15px;
+        width: 15px;
+        height: 15px;
+    }
+
+    .btn-submit {
+        margin-top: 20px;
+    }
+
+    &__nav {
+        margin-top: 40px;
+        display: flex;
+        flex-direction: column;
+        column-gap: 40px;
+    }
+
+    &__nav-wrapper {
+        display: flex;
+        align-items: start;
+        column-gap: 66px;
+        flex-wrap: wrap;
+        row-gap: 40px;
+    }
+
+    &__nav-list {
+        margin-top: 40px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        padding: 0;
+    }
+
+    &__nav-link {
+        display: block;
+        list-style-type: none;
+        margin: 0;
+
+        a {
+            display: block;
+            text-decoration: none;
+            color: $light;
+            margin: 0;
+        }
+    }
+
+    &__social {
+        margin-top: 40px;
+    }
+
+    &__social-wrapper {
+        margin-top: 40px;
+        display: flex;
+        gap: 10px;
+        flex-direction: row;
+    }
+
+    &__social-link {
+        text-decoration: none;
+        width: 24px;
+        height: 24px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        span {
+            display: block;
+            color: $light;
+            font-size: 24px;
+        }
+
+        ::before {
+            margin: 0;
+            padding: 0;
+        }
+    }
+
+    &__copyright {
+        text-align: center;
+        margin-top: 40px;
+        color: $light;
+        font-size: 14px;
         font-weight: 400;
         line-height: 100%;
         letter-spacing: 0%;
-        text-align: left;
+    }
+
+}
+
+@media screen and (min-width: 768px) {
+    .footer {
+        &__wrapper {
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        &__nav-wrapper {
+            flex-wrap: nowrap;
+            row-gap: 0;
+        }
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .footer {
+        &__wrapper {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        &__newsletter {
+            min-width: 0;
+        }
+
+        &__nav {
+            margin-top: 0;
+        }
+
+        &__social {
+            margin-top: 0;
+        }
+    }
+}
+
+@media screen and (min-width: 1920px) {
+    .footer {
+        margin-top: 125px;
     }
 }
