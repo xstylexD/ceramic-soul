@@ -1,0 +1,89 @@
+@use "/src/sass/base/variables.scss" as *;
+
+.blog {
+    padding-top: 50px;
+
+    &__title {
+        margin-top: 60px;
+    }
+
+    &__content {
+        margin-top: 60px;
+    }
+
+    &__notes {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 40px;
+    }
+
+    &__note {
+        border: 1px solid $dark;
+        box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.25);
+        background: $light;
+
+        &-img {
+            max-inline-size: calc(100% + 2px);
+            transform: translateX(-1px) translateY(-1px);
+        }
+
+        &-header {
+            padding: 25px 25px 0 25px;
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+        }
+
+        &-title,
+        .title-h3 {
+            text-align: left;
+            font-size: 24px;
+        }
+
+        &-text {
+            padding: 25px;
+            color: $dark;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 100%;
+            letter-spacing: 0%;
+            text-align: left;
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .blog {
+        &__notes {
+            position: relative;
+            padding: 25px 25px 0 25px;
+
+            &::before {
+                content: "";
+                position: absolute;
+                width: 200px;
+                height: 200px;
+                background-color: transparent;
+                border-top: 1px solid $dark;
+                border-left: 1px solid $dark;
+                top: 0;
+                left: 0;
+            }
+        }
+
+        &__note {
+            &-header {
+                gap: 0;
+                justify-content: space-between;
+            }
+
+            &-text {
+                padding-top: 15px;
+            }
+
+            &-img {
+                object-fit: cover;
+            }
+        }
+    }
+}

@@ -98,7 +98,7 @@
             &-item {
                 flex-direction: row;
                 flex-wrap: wrap;
-                padding: 0 10px;
+                padding: 10px 10px 0 10px;
 
                 &::before {
                     content: "";
@@ -108,7 +108,7 @@
                     background-color: transparent;
                     border-top: 1px solid $dark;
                     border-left: 1px solid $dark;
-                    top: -10px;
+                    top: 0;
                     left: 0;
                 }
             }
@@ -124,12 +124,8 @@
     .catalog {
         &__content {
             &-item {
-                padding: 0 25px;
+                padding: 25px 25px 0 25px;
                 gap: 35px;
-
-                &::before {
-                    top: -25px;
-                }
             }
         }
     }
