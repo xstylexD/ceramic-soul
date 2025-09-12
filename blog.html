@@ -106,11 +106,14 @@
                 <div class="footer__newsletter">
                     <h3 class="title-h3 footer__title">newsletter</h3>
                     <p class="footer__info">Keep up to date with news and promotions</p>
-                    <form action="#">
-                        <input class="footer__input" type="email" name="email" placeholder="Enter your e-mail">
+                    <form id="footer__form" action="#">
+                        <input class="footer__input" type="email" name="email" id="footer__email"
+                            placeholder="Enter your e-mail">
+                        <div class="error-message-email"></div>
                         <label class="footer__label footer__check-block">
-                            <input class="footer__checkbox" type="checkbox" id="checkbox">
+                            <input class="footer__checkbox" type="checkbox" id="footer__checkbox">
                             I agree with the <a href="#">terms</a></label>
+                        <div class="chekbox-error-message"></div>
                         <button class="btn-submit">submit</button>
                     </form>
                 </div>
@@ -118,7 +121,7 @@
                 <div class="footer__nav">
                     <div class="footer__nav-wrapper">
                         <div class="footer__nav-item">
-                            <h3 class="footer__title title-h3">discover</h3>
+                            <h3 class="title-h3 footer__title">discover</h3>
                             <ul class="footer__nav-list">
                                 <li class="footer__nav-link"><a href="/about.html">About Us</a></li>
                                 <li class="footer__nav-link"><a href="/blog.html">Blog</a></li>
@@ -155,6 +158,7 @@
             <div class="footer__copyright">© Copyright 2025, Ceramic soul</div>
         </div>
     </footer>
+
 
     <script type="module" src="/src/js/script.js"></script>
 </body>

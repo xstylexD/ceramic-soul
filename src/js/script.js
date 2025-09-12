@@ -2,6 +2,7 @@
 // import "purecss/build/grids-responsive-min.css"
 import Swiper from 'swiper';
 import { Navigation, Pagination } from 'swiper/modules';
+import JustValidate from 'just-validate';
 
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -67,4 +68,74 @@ try {
     contents.forEach((c, i) => (c.style.display = i === 0 ? "flex" : "none"));
 } catch (e) { }
 
-// Об
+try {
+    const validator = new JustValidate('form');
+    validator
+        .addField('#name', [
+            {
+                rule: 'required',
+                errorMessage: 'Please field the Name',
+            },
+            {
+                rule: 'minLength',
+                value: 2,
+                errorMessage: 'Min 2 char',
+            }
+        ])
+        .addField('#email', [
+            {
+                rule: 'email',
+            },
+            {
+                rule: 'required',
+                errorMessage: 'Please field the Email',
+            }
+        ])
+        .addField('#question', [
+
+            {
+                rule: 'required',
+            },
+            {
+                rule: 'minLength',
+                value: 5,
+            },
+            {
+                rule: 'maxLength',
+                value: 130,
+            },
+        ], {
+            errorsContainer: document.querySelector('#question').parentElement.querySelector('.error-message')
+            // errorsContainer: document.querySelector('.error-message'),
+        })
+        .addField('#checkbox', [
+            {
+                rule: 'required',
+            },
+        ], {
+            errorsContainer: document.querySelector('#checkbox').parentElement.parentElement.querySelector('.chekbox-error-message')
+            // errorsContainer: document.querySelector('.chekbox-error-message'),
+        })
+} catch (e) { }
+
+const footer__validator = new JustValidate('#footer__form');
+footer__validator
+    .addField('#footer__email', [
+        {
+            rule: 'email',
+        },
+        {
+            rule: 'required',
+            errorMessage: 'Please field the Email',
+        }
+    ], {
+        errorsContainer: document.querySelector('#footer__email').parentElement.querySelector('.error-message-email')
+    })
+    .addField('#footer__checkbox', [
+        {
+            rule: 'required',
+        },
+    ], {
+        errorsContainer: document.querySelector('#footer__checkbox').parentElement.parentElement.querySelector('.chekbox-error-message')
+        // errorsContainer: document.querySelector('.chekbox-error-message'),
+    })

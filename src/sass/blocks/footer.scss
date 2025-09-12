@@ -1,6 +1,12 @@
 @use "/src/sass/base/variables.scss" as *;
 
 .footer {
+
+    .just-validate-error-field {
+        border-color: $ui-error;
+        color: $ui-error;
+    }
+
     margin-top: 60px;
     padding: 50px 0;
     background-color: $dark;

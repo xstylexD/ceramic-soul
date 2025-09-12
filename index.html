@@ -122,10 +122,12 @@
 						<label class="touch__label" for="question">Your question</label>
 						<textarea class="touch__textarea" name="question" id="question" placeholder="Question"
 							required></textarea>
+						<div class="error-message"></div>
 
 						<label class="touch__label touch__check-block">
 							<input class="touch__checkbox" type="checkbox" id="checkbox" required>
 							I agree with the <a href="#">terms</a></label>
+						<div class="chekbox-error-message"></div>
 						<button class="btn-send touch__btn">send request</button>
 					</form>
 
@@ -167,11 +169,14 @@
 				<div class="footer__newsletter">
 					<h3 class="title-h3 footer__title">newsletter</h3>
 					<p class="footer__info">Keep up to date with news and promotions</p>
-					<form action="#">
-						<input class="footer__input" type="email" name="email" placeholder="Enter your e-mail">
+					<form id="footer__form" action="#">
+						<input class="footer__input" type="email" name="email" id="footer__email"
+							placeholder="Enter your e-mail">
+						<div class="error-message-email"></div>
 						<label class="footer__label footer__check-block">
-							<input class="footer__checkbox" type="checkbox" id="checkbox">
+							<input class="footer__checkbox" type="checkbox" id="footer__checkbox">
 							I agree with the <a href="#">terms</a></label>
+						<div class="chekbox-error-message"></div>
 						<button class="btn-submit">submit</button>
 					</form>
 				</div>
@@ -216,6 +221,7 @@
 			<div class="footer__copyright">© Copyright 2025, Ceramic soul</div>
 		</div>
 	</footer>
+
 
 	<script type="module" src="/src/js/script.js"></script>
 
